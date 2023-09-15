@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Bionic Reading", 
+    "version": "1.0", 
+    "description": "Utilize bionic reading tactics for articles across the web with this Chrome Extension",
+    "icons": {
+        "128": "images/BR Small PFP.png"
+    },
+
+    "action": {
+        "default_popup": "scripts/hello.html"
+    },
+
+    "content_scripts": 
+    [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["scripts/content.js"], 
+            "run_at": "document_end"
+        }
+    ]
+}
